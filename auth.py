@@ -1,0 +1,5 @@
+user_id = ''
+access_token = ''
+api_secret = ''
+url_extension = 'username/albums/'
+api_key = ''

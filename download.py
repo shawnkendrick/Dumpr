@@ -1,5 +1,6 @@
 import re
 import auth
+import time
 import random
 import os, sys
 import requests
@@ -91,6 +92,7 @@ def save_photos(photo_details):
         save_path = './' + dir_name
         try:
             image_request = requests.get(photo_url, stream = True)
+            time.sleep(3)
             full_save_path = os.path.join(save_path, photo_filename)   
             print('Downloading: ' + full_save_path)      
             open(full_save_path, 'wb').write(image_request.content)  
